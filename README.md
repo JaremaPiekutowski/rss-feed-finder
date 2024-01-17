@@ -16,7 +16,14 @@ pip install requests
 pip install beautifulsoup4
 ```
 
-## Usage
+## Usage as a package
+
+```
+import feed_finder as ff
+ff.show_feeds_urls("www.example.com")
+```
+
+## Usage - command line
 Run the script from the command line, providing the URL of the webpage you want to check for RSS feed URLs.
 
 ```
