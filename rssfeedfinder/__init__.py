@@ -1,1 +1,1 @@
-from .feed_finder import show_feeds_urls
+from . import feed_finder
