@@ -1,34 +1,55 @@
 # RSS Feed Finder
-This Python script aims to find RSS feed URLs for a given webpage. It utilizes the requests library for making HTTP requests and BeautifulSoup for parsing HTML content.
+
+This Python package is designed to find RSS feed URLs for a given webpage. It utilizes the `requests` library for making HTTP requests and `BeautifulSoup` for parsing HTML content.
 
 ## Requirements
+
 - Python 3.x
-- Requests library (`pip install requests`)
-- BeautifulSoup library (`pip install beautifulsoup4`)
+- Requests library
+- BeautifulSoup library
 
 ## Installation
-Make sure you have Python installed on your system. You can download it from [python.org](python.org).
 
-Install the required libraries using the following commands:
+### From the source
 
-```
-pip install requests
-pip install beautifulsoup4
-```
+To install the RSS Feed Finder package from the source, follow these steps:
 
-## Usage as a package
+1. **Clone the Repository**: First, clone the repository to your local machine using git. If you don't have git installed, you can download it from [git-scm.com](https://git-scm.com/).
 
-```
-import feed_finder as ff
+    ```
+    git clone https://github.com/yourusername/rssfeedfinder.git
+    cd rssfeedfinder
+    ```
+
+    Replace `https://github.com/yourusername/rssfeedfinder.git` with the actual URL of your repository.
+
+2. **Install the Package**: You can install the package using `pip`. Make sure you are in the root directory of the cloned repository (where `setup.py` is located).
+
+    ```
+    pip install .
+    ```
+
+    This command will install the package along with its dependencies.
+
+## Usage
+
+### As a package
+
+After installation, you can use the RSS Feed Finder in your Python projects by importing it:
+
+```python
+import rssfeedfinder as ff
 ff.show_feeds_urls("www.example.com")
 ```
 
-## Usage - command line
-Run the script from the command line, providing the URL of the webpage you want to check for RSS feed URLs.
+### Command line
+
+You can also use RSS Feed Finder directly from the command line. Navigate to the directory containing feed_finder.py and run the script by providing the URL of the webpage you want to check for RSS feed URLs:
 
 ```
-python feed_finder.py https://example.com
+python -m feed_finder.py https://example.com
 ```
+
 The script will output the found RSS feed URLs for the provided webpage.
 
 **Note:** If the script encounters an error while trying to fetch the feed URLs, it will print an error message indicating the issue.
